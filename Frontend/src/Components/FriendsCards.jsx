@@ -3,12 +3,16 @@ import Button from './Button'
 
 const FriendsCards = ({title}) => {
   return (
-    <div>
-      <div className='flex flex-col items-center justify-center h-16 w-36 bg-stone-800 text-white 
-                      border-2 rounded-md my-2'>
+    <div className='flex'>
+      <div className='flex items-center justify-between h-8 w-1/4 bg-neutral-800 px-2 text-white 
+         rounded-md'>
         {title}
-        <Button title="Add"/>
+        
       </div>
+      <button 
+         className='h-8 w-24 bg-neutral-800 rounded-md hover:bg-neutral-900 text-center 
+          cursor-pointer mx-1'
+        >Add</button>
     </div>
   )
 }
