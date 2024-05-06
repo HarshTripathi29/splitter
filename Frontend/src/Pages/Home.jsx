@@ -22,10 +22,10 @@ const Home = () => {
       </div>
 
       <div className='flex m-4'>
-        <div className='h-28 w-28 border-2 rounded-sm m-2 bg-neutral-600'>info cards</div>
-        <div className='h-28 w-28 border-2 rounded-sm m-2 bg-neutral-600'>info cards</div>
-        <div className='h-28 w-28 border-2 rounded-sm m-2 bg-neutral-600'>info cards</div>
-        <div className='h-28 w-28 border-2 rounded-sm m-2 bg-neutral-600'>info cards</div>
+        <div className='h-28 w-28 rounded-md m-2 bg-neutral-600'>info cards</div>
+        <div className='h-28 w-28 rounded-md m-2 bg-neutral-600'>info cards</div>
+        <div className='h-28 w-28 rounded-md m-2 bg-neutral-600'>info cards</div>
+        <div className='h-28 w-28 rounded-md m-2 bg-neutral-600'>info cards</div>
       </div>
 
     </div>

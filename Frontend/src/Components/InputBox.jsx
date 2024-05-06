@@ -1,9 +1,8 @@
 
-export function InputBox({label, placeholder}) {
+export function InputBox({ placeholder}) {
     return <div>
-      <div className="text-sm font-medium text-left py-2">
-        {label}
-      </div>
-      <input placeholder={placeholder} className="w-full px-2 py-1 border rounded border-slate-200" />
+      <input 
+      placeholder={placeholder} 
+      className='h-6 w-36 p-1 border-none rounded-md mb-2 bg-neutral-800'/>
     </div>
 }

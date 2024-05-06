@@ -10,35 +10,36 @@ const [password, setPassword] = useState("");
 
 
   return (
-    <div className='flex justify-center bg-stone-900 w-screen h-screen'>
-    <div className='bg-stone-950 text-stone-500 flex flex-col justify-center m-8 p-4'>
+    <div className='flex justify-center items-center bg-neutral-900 w-screen h-screen'>
+    <div className='w-64 h-80 bg-neutral-950 text-neutral-500 flex flex-col justify-center rounded-md p-4'>
     <div className='rounded-lg text-center'>
-      <h1>Sign Up</h1>
-      <h3>Enter your details to create an account</h3>
-      <div className=''>
-      <InputBox 
-        label="email" 
-        input="enter your email id"
-         
+      <h1 className='font-bold text-2xl text-white'>Sign Up</h1>
+      <h3>Enter your details</h3>
+      <div className='my-1'>
+      <input   
+        placeholder="email id"
+        className='h-8 w-52 p-1 border-none rounded-md mb-2 bg-neutral-800'
         />
-      <InputBox 
-        label="phone number" 
-        input="enter your phone number"
+      <input
+        placeholder="phone number"
         onChange={(e)=>{setPhoneno(e.target.value)}}
+        className='h-8 w-52 p-1 border-none rounded-md mb-2 bg-neutral-800'
         />
-      <InputBox 
-        label="username" 
-        input="enter your username" 
+      <input
+       
+        placeholder="username" 
         onChange={(e)=>{setUsername(e.target.value)}}
+        className='h-8 w-52 p-1 border-none rounded-md mb-2 bg-neutral-800'
         />
       {console.log(username)}
-      <InputBox 
-        label="password" 
-        input="enter your password"
+      <input
+        placeholder="password"
         onChange={(e)=>{setPassword(e.target.value)}}
+        className='h-8 w-52 p-1 border-none rounded-md mb-2 bg-neutral-800'
         />
       </div>
-      <button className='bg-stone-800 m-4'>Submit</button>
+      <button className='h-8 w-52 bg-neutral-800 rounded-md hover:bg-neutral-900 hover:font-bold
+     text-center cursor-pointer'>Submit</button>
     </div>
     </div>
     </div>
