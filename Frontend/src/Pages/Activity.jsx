@@ -5,8 +5,8 @@ const Activity = () => {
   return (
     <div className='flex'>
     <Sidebar/>
-      <div>
-        <h1>Activity</h1>
+      <div className='bg-neutral-900 h-screen w-screen'>
+        <h1 className='text-white font-bold text-3xl m-2'>Activity</h1>
       </div>
     </div>
   )

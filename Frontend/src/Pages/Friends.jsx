@@ -102,7 +102,6 @@ const Friends = () => {
     }
     </div>
     </div>
-
     </div>
     </div>
   )

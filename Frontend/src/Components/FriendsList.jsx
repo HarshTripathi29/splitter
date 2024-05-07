@@ -30,6 +30,7 @@ const FriendsList = () => {
     const addObject = ()=>{
         setFriendsList([...FriendsList, newFreindObject]);
     }
+    
     return (
     <div>
     <div className='flex flex-wrap'>

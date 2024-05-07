@@ -7,7 +7,8 @@ const Home = () => {
     <div className='flex flex-col items-center bg-neutral-900'>
     <div className='flex flex-col items-center bg-neutral-900 w-3/4 h-screen'>
     <Link to="/groups">
-    <button className='bg-neutral-700 text-xl text-orange-600 font-bold border-2-black rounded-xl w-36 h-8 mt-4'>
+    <button className='bg-neutral-900 text-xl text-orange-500  border-2 
+    border-neutral-700 rounded-xl w-36 h-8 mt-4 hover:font-extrabold hover:bg-neutral-800'>
       Get Started
     </button>
     </Link>
