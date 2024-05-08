@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Button from './Button'
+import { motion } from 'framer-motion';
 import AddUsers from './AddUsers';
 
 const GroupCard = ({grpname}) => {
@@ -13,7 +14,8 @@ const GroupCard = ({grpname}) => {
     // setShowGrpCard(!showGrpCard);
   }
   return (
-    <div className='flex bg-neutral-900 w-screen h-screen'>
+    <motion.div initial={{x:-5, opacity:0.5}} animate={{x:0, opacity:1}} 
+     className='flex bg-neutral-900 w-screen h-screen'>
     {showGrpCard && (<>
       <div className='flex flex-col h-8 w-1/4 bg-neutral-900 text-white 
                        rounded-md my-4 cursor-pointer'>
@@ -29,7 +31,7 @@ const GroupCard = ({grpname}) => {
       <div>
       {showAddUser && <AddUsers groupname={grpname}/>}
       </div>
-    </div>
+    </motion.div>
   )
 }
 

@@ -7,7 +7,7 @@ const SideCards = ({title}) => {
     <div>
       <div 
    
-      className='flex items-center justify-center h-12 w-48 bg-transparent text-white 
+      className='flex items-center justify-center h-12 w-28 bg-transparent text-white 
        hover:font-bold hover:bg-neutral-900 cursor-pointer'
        >
         {title}

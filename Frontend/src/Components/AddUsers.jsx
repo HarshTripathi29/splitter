@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import FriendsCards from './FriendsCards'
 import GrpMembers from './GrpMembers'
+import { motion } from 'framer-motion'
 import { useSelector } from 'react-redux'
 
 const AddUsers = ({groupname}) => {
@@ -28,7 +29,8 @@ const AddUsers = ({groupname}) => {
   }
     
   return (
-    <div className='mt-8 flex h-screen w-4/4 justify-between bg-neutral-900 ml-20'>
+    <>
+    <motion.div initial={{x:-5, opacity:0.5}} animate={{x:0, opacity:1}} className='mt-8 flex h-screen w-4/4 justify-between bg-neutral-900 ml-20'>
     <div className=''>
     <h1 className='font-bold text-2xl'>{groupname}</h1>
       <h1 className='text-xl font-semibold'>Search Friends</h1>
@@ -64,7 +66,8 @@ const AddUsers = ({groupname}) => {
       <div>
         <GrpMembers name={addToGrpArray}/>
       </div>
-    </div>
+    </motion.div>
+    </>
   )
 }
 

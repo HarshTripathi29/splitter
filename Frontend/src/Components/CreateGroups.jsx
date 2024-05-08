@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Button from './Button'
 import GroupCard from './GroupCard';
+import { motion } from 'framer-motion';
 
 const CreateGroups = () => {
 
@@ -24,7 +25,7 @@ const CreateGroups = () => {
 
   return (
     <div>
-      <div className='w-4/4 h-screen bg-neutral-900'>
+      <motion.div initial={{x:-5, opacity:0.5}} animate={{x:0, opacity:1}} className='w-4/4 h-screen bg-neutral-900'>
 
       {showCreateGrp && (<>
         <h1 className='text-2xl text-white mt-8 font-bold'>Create Group</h1>
@@ -52,7 +53,7 @@ const CreateGroups = () => {
         </>)}
         {showGroupCard && <GroupCard grpname={createGroup}/>}
        
-      </div>
+      </motion.div>
     </div>
   )
 }
