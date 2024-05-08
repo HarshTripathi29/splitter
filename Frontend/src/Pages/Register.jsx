@@ -3,10 +3,12 @@ import { useState } from 'react';
 import { useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import { checkValidData } from '../utils/vailidate';
 
 const Register = () => {
 
 const[isSignUpForm, setIsSignUpForm] = useState(true);
+const[errorMessage, setErrorMessage] = useState(" ");
 
 const email = useRef();
 const password = useRef();
@@ -16,12 +18,20 @@ const username = useRef();
 const dispatch = useDispatch();
 
 const handleClick =()=>{
+
+  const message = checkValidData(email.current.value, password.current.value);
+
+  console.log(message);
+  setErrorMessage(message);
+ 
+  if(errorMessage==" ")
+  {
   dispatch(addUser({
   name : username.current.value,
   email : email.current.value,
   phonenumber : phoneno.current.value,
   password : password.current.value,
-}))
+}))}
 }
 
 const toggleSignUp=()=>{
@@ -63,6 +73,7 @@ const toggleSignUp=()=>{
       <button className='h-8 w-52 bg-neutral-800 rounded-md hover:bg-neutral-900 hover:font-bold
      text-center cursor-pointer'
      onClick={handleClick}>Submit</button>
+     <div>{errorMessage}</div>
      <div className='pt-2 cursor-pointer' onClick={toggleSignUp}>{isSignUpForm? "Already Registered ? Login" : "New here ? Register"}</div>
     </div>
     </div>

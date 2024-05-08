@@ -17,7 +17,7 @@ const GrpMembers = ({name}) => {
  
   return (
     <div>
-      <div className=' flex-col  w-60 h-56 bg-neutral-800 rounded-md p-2 '>
+      <div className=' flex-col screen mt-12 h-screen bg-neutral-900 border-2 border-neutral-600 rounded-md p-2 '>
       <h1 className='font-bold text-xl'>Group Members</h1>
         <div>
             <ul>
@@ -26,10 +26,11 @@ const GrpMembers = ({name}) => {
               ))}
             </ul>
         </div>
-      </div>
-      <button className='h-6 w-32 text-center bg-neutral-800 rounded-xl hover:bg-neutral-900 mt-1 hover:font-bold'
+        <button className='h-6 w-32 text-center bg-orange-600 rounded-xl hover:bg-neutral-900 mt-1 hover:font-bold'
         onClick={handleClick}
         >Create Group</button>
+      </div>
+     
     </div>
   )
 }

@@ -28,15 +28,15 @@ const AddUsers = ({groupname}) => {
   }
     
   return (
-    <div className='flex'>
-    <div className='w-2/4'>
+    <div className='mt-8 flex h-screen w-4/4 justify-between bg-neutral-900 ml-20'>
+    <div className=''>
     <h1 className='font-bold text-2xl'>{groupname}</h1>
       <h1 className='text-xl font-semibold'>Search Friends</h1>
       <div>
         <input 
             type='text'
             placeholder='search friends'
-            className='w-1/4 bg-neutral-800 border-none rounded-md mt-2 px-2 h-8'
+            className='w-2/4 bg-neutral-800 border-none rounded-md mt-2 px-2 h-8'
             onChange={(e)=>{handleChange(e)}}
         />
         <button className='h-8 w-24 bg-neutral-800 rounded-md hover:bg-neutral-900 hover:font-bold

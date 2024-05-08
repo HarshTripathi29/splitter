@@ -11,7 +11,7 @@ const MainContainer = () => {
 
   const handleClick=()=>{
     setShowCreateGroup(!showCreateGroup);
-    setShowAddBtn(!showAddBtn);
+    // setShowAddBtn(!showAddBtn);
     console.log("btn clicked");
   }
   

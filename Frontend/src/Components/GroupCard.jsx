@@ -10,12 +10,12 @@ const GroupCard = ({grpname}) => {
   const handleClick=()=>{
     console.log(" add user button clicked");
     setShowAddUser(!showAddUser);
-    setShowGrpCard(!showGrpCard);
+    // setShowGrpCard(!showGrpCard);
   }
   return (
-    <div>
+    <div className='flex bg-neutral-900 w-screen h-screen'>
     {showGrpCard && (<>
-      <div className='flex flex-col justify-between h-8 w-1/4 bg-neutral-900 text-white 
+      <div className='flex flex-col h-8 w-1/4 bg-neutral-900 text-white 
                        rounded-md my-4 cursor-pointer'>
       <div className='text-left'>
         {grpname}
@@ -26,7 +26,9 @@ const GroupCard = ({grpname}) => {
       >Add User</button>
       </div>
       </>)}
+      <div>
       {showAddUser && <AddUsers groupname={grpname}/>}
+      </div>
     </div>
   )
 }
