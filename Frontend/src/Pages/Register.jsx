@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 import { checkValidData } from '../utils/vailidate';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
 const Register = () => {
 
@@ -20,18 +21,52 @@ const dispatch = useDispatch();
 const handleClick =()=>{
 
   const message = checkValidData(email.current.value, password.current.value);
-
   console.log(message);
   setErrorMessage(message);
  
-  if(errorMessage==" ")
-  {
-  dispatch(addUser({
-  name : username.current.value,
-  email : email.current.value,
-  phonenumber : phoneno.current.value,
-  password : password.current.value,
-}))}
+  if(message) return
+
+if(isSignUpForm){
+  const auth = getAuth();
+createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
+  .then((userCredential) => {
+    // Signed up 
+    const user = userCredential.user;
+    console.log(user);
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    setErrorMessage(errorCode +" - " + errorMessage);
+    // ..
+  });
+  
+  console.log(errorMessage);
+}  
+
+else {
+  const auth = getAuth();
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    });
+}
+
+// if(errorMessage==" ")
+//   {
+//   dispatch(addUser({
+//   name : username.current.value,
+//   email : email.current.value,
+//   phonenumber : phoneno.current.value,
+//   password : password.current.value,
+// }))}
 }
 
 const toggleSignUp=()=>{
